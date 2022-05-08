@@ -1,0 +1,42 @@
+@import '../../theme.scss';
+.CourseSection {
+    display: grid;
+    grid-template-columns:  1fr;
+
+    @media ($tablet){
+        grid-template-columns: 2fr 3fr;
+        column-gap: 60px;
+    }
+
+    &-Figure {
+        border-radius: 30px;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+
+        @media ($tablet){
+            border-radius: 8%;
+        }
+    }
+    
+    &-Img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    &-Content {
+        width: 100%;
+        padding-top: 24px;
+
+        @media ($tablet){
+            padding-top: 0;
+        }
+    }
+    
+    &-Text {
+        font-size: 18px;
+        line-height: 180%;
+        color: $colorTextSecondary;
+    }
+}
