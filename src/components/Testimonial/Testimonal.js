@@ -1,23 +1,23 @@
 import React from 'react';
-import './Testimonial.scss';
+import {Testimonial as TestimonialDiv, Figure, Image, Content, Text, Quotation} from './TestimonialStyle'
 import {testimonialsText} from '../../assets/contents/Texts'
 
 import TestimonialImg from '../../assets/images/testimonial.jpg';
 
 const Testimonial = () => {
     return (
-        <div className="Testimonial">
-            <figure className="Testimonial-Figure">
-                <img src={TestimonialImg} alt="Testimonialka" className="Testimonial-Img" />
-            </figure>
-            <div className="Testimonial-Content">
-                <p className="Testimonial-Text">
-                    <span className="Testimonial-Quotation">"</span>
+        <TestimonialDiv>
+            <Figure>
+                <Image src={TestimonialImg} alt="Testimonialka" />
+            </Figure>
+            <Content>
+                <Text>
+                    <Quotation>"</Quotation>
                         {testimonialsText}
-                    <span className="Testimonial-Quotation">"</span>
-                </p>
-            </div>
-        </div>
+                    <Quotation>"</Quotation>
+                </Text>
+            </Content>
+        </TestimonialDiv>
     );
 }
 

@@ -1,29 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Button.scss";
+import {Button as ButtonComponent} from './ButtonStyle'
 
-const Button = ({children, modifiers, reference}) => {
-    const modifierClasses = {
-        secondary: 'Button_secondary',
-        nav: 'Button_nav',
-        landing: 'Button_landing',
-        heading: 'Button_heading',
-        outline: 'Button_outline'
-    } 
+const Button = ({reference, children, isNav, isHeading, isOutline, isSecondary}) => {
 
-    let buttonClasses = "Button";
     let navigate = useNavigate();
-
-    modifiers && modifiers.map(modifier => buttonClasses += " " + modifierClasses[modifier])
-
     const handleClick = () => {
         if(reference) navigate(reference)
     }
 
     return (
-        <button className={buttonClasses} onClick={handleClick}>
-             {children} 
-        </button>
+        <ButtonComponent 
+            isNav={isNav} 
+            isHeading={isHeading}
+            isOutline={isOutline}
+            isSecondary={isSecondary}
+            onClick={handleClick}>
+                {children}
+        </ButtonComponent>
     )
 }
 

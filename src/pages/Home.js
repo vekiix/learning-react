@@ -1,16 +1,24 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import Header from "../components/Header/Header.js";
 import Main from "../components/Main/Main.js";
 import Landing from "../components/Landing/Landing.js";
 import Section from "../components/Section/Section.js";
-import Grid from "../components/Grid/Grid.js";
 import CourseCard from "../components/CourseCard/CourseCard.js";
 import Testimonial from "../components/Testimonial/Testimonal.js";
 
+import { Grid } from "../lib/style/generalStyles.js";
 import {sectionActionText,sectionTitle} from "../assets/contents/Texts.js"
-import CoursePages from "../assets/contents/CoursePages.js";
+import coursesMock from "../lib/mock/courses.js";
 
 const Home = () => {
+    const [courses, setCourses] = useState(null)
+    useEffect(() => {
+        setTimeout(()=>{
+            setCourses(coursesMock);
+        },1000)
+    },[])
+
+
     return (
         <>
             <Header />
@@ -24,23 +32,21 @@ const Home = () => {
                 buttonText={"More Courses"}
                 buttonReference = {"/courses"}
                 >
-                <Grid>
-                {
-                    CoursePages.slice(0,4).map(course => {
-                        return (
-                            <CourseCard
-                            key={course.title}
-                            imgSrc={course.imgSrc}
-                            imgAlt={course.imgAlt}
-                            title={course.title}
-                            subtitle={course.subtitle} 
-                            reference="/course"
-                            />
-                        )})
-                }
-                </Grid>
+                {courses && <Grid>
+                    {courses.map((course, index) => index <= 3 &&
+                        <CourseCard 
+                        key={course.id}
+                        courseId = {course.id}
+                        imgSrc={course.imgSrc}
+                        imgAlt={course.imgAlt}
+                        title={course.title}
+                        subtitle={course.subtitle} 
+                        reference={"/course/" + course.id}
+                        />
+                    )}
+                    </Grid>}
                 </Section>
-                <Section modifiers={['testimonials']}>
+                <Section testimonials>
                     <Testimonial />
                 </Section>
             </Main> 

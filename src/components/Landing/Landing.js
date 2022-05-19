@@ -1,28 +1,27 @@
 import React from "react";
-import './Landing.scss';
-
+import {Landing as LandingDiv, Figure, Img, ContentInner, Title, Subtitle, Overlay, OverlayPrimary, OverlaySecondary, Content} from './LandingStyle'
 import {landingTitle, landingSubtitle} from '../../assets/contents/Texts.js'
 import LandingImg from '../../assets/images/landing.jpg'
 import Button from '../Button//Button.js'
 
 const Landing = () => {
     return (
-        <div className="Landing">
-            <div className="Landing-Figure">
-                <img src={LandingImg} alt="Landing image" className="Landing-Img" />
-            </div>
-            <div className="Landing-Overlay">
-                <div className="Landing-OverlayPrimary"></div>
-                <div className="Landing-OverlaySecondary"></div>
-            </div>
-            <div className="Landing-Content">
-                <div className="Landing-ContentInner">
-                    <h1 className="Landing-Title">{landingTitle}</h1>
-                    <p className="Landing-Subtitle">{landingSubtitle}</p>
-                    <Button modifiers={['landing']} reference="/courses">Explore courses</Button>
-                </div>
-            </div>
-        </div>
+        <LandingDiv>
+            <Figure >
+                <Img src={LandingImg} alt="Landing image" />
+            </Figure>
+            <Overlay>
+                <OverlayPrimary></OverlayPrimary>
+                <OverlaySecondary></OverlaySecondary>
+            </Overlay>
+            <Content>
+                <ContentInner>
+                    <Title>{landingTitle}</Title>
+                    <Subtitle>{landingSubtitle}</Subtitle>
+                    <Button  isLanding reference="/courses">Explore courses</Button>
+                </ContentInner>
+            </Content>
+        </LandingDiv>
     )
 }
 

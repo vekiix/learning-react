@@ -1,18 +1,21 @@
-@import '../../theme.scss';
+import styled from 'styled-components';
+import { breakpoints, colors } from '../../lib/style/theme';
 
-.Section {
+
+export const Section = styled.section`
     padding: 60px 24px;
 
-    @media ($desktop){
+    @media (${breakpoints.desktop}){
         padding: 120px 0;
     }
-    
-    &_testimonials {
-        background-color: $colorBgSecondary;
-    }
 
-    &-Inner {
-        @media ($desktop){
+    ${(props => props.testimonials && `
+        background-color: ${colors.bgSecondary}
+    `)}
+`;
+
+export const SectionInner = styled.div `
+        @media (${breakpoints.desktop}){
             width: 960px;
             margin: 0 auto;
         }
@@ -20,16 +23,16 @@
         @media (min-width: 1300px){
             width: 1260px;
         }
-    }
+`
 
-    &-ActionText {
+export const ActionText = styled.span`
         display: block;
-        color: $colorPrimary;
+        color: ${colors.primary};
         font-weight: 500pt;
         margin-bottom: 24px;
-    }
-    
-    &-Heading {
+`
+
+export const Heading = styled.div`
         margin-bottom: 64px;
         
 
@@ -38,10 +41,10 @@
             justify-content: space-between;
             align-items: center;
         }
-    }
-    
-    &-Title {
-        color: $colorTextPrimary;
+`
+
+export const Title = styled.h2`
+        color: ${colors.textPrimary};
         font-size: 26px;
         font-weight: 500pt;
         margin-bottom: 32px;
@@ -51,8 +54,7 @@
             margin-bottom: 0;
         }
 
-        @media ($desktop){
+        @media (${breakpoints.desktop}){
             font-size: 36px;
         }
-    }
-}
+`
