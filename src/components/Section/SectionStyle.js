@@ -4,7 +4,6 @@ import { breakpoints, colors } from '../../lib/style/theme';
 
 export const Section = styled.section`
     padding: 60px 24px;
-
     @media (${breakpoints.desktop}){
         padding: 120px 0;
     }

@@ -34,6 +34,10 @@ export const Button = styled.button`
     ${props => props.isOutline && `
         border: 1px solid ${colors.primary};
     `}
+
+    ${props => props.isLanding && `
+        order: 1px solid ${colors.primary};
+    `}
     
     ${props => props.isHeading && `
         width: 200px;

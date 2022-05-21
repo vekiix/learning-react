@@ -1,5 +1,6 @@
-import './App.scss';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import './App.scss'
 import Home from './pages/Home.js';
 import Course from './pages/Course.js'
 import Courses from './pages/Courses'

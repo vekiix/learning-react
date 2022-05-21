@@ -5,7 +5,7 @@ import Landing from "../components/Landing/Landing.js";
 import Section from "../components/Section/Section.js";
 import CourseCard from "../components/CourseCard/CourseCard.js";
 import Testimonial from "../components/Testimonial/Testimonal.js";
-
+import LoaderComponent from "../components/LoaderComponent/LoaderComponent.js";
 import { Grid } from "../lib/style/generalStyles.js";
 import {sectionActionText,sectionTitle} from "../assets/contents/Texts.js"
 import coursesMock from "../lib/mock/courses.js";
@@ -27,11 +27,12 @@ const Home = () => {
                     <Landing />
                 </section>
                 <Section
-                actionText={sectionActionText}
-                title={sectionTitle}
-                buttonText={"More Courses"}
-                buttonReference = {"/courses"}
+                    actionText={sectionActionText}
+                    title={sectionTitle}
+                    buttonText={"More Courses"}
+                    buttonReference = {"/courses"}
                 >
+                {!courses && <LoaderComponent />}
                 {courses && <Grid>
                     {courses.map((course, index) => index <= 3 &&
                         <CourseCard 
