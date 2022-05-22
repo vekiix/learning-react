@@ -9,7 +9,7 @@ const Landing = () => {
     return (
         <div className="Landing">
             <div className="Landing-Figure">
-                <img src={LandingImg} alt="Landing image" className="Landing-Img" />
+                <img src={LandingImg} alt="Landing" className="Landing-Img" />
             </div>
             <div className="Landing-Overlay">
                 <div className="Landing-OverlayPrimary"></div>
