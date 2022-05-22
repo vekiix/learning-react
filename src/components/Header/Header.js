@@ -22,11 +22,12 @@ const Header = ({isSecondary}) => {
                 <HamburgerMenu />
                 <Nav>
                     <HeaderNavLink to={"/courses"}>Courses</HeaderNavLink>
-                    <ButtonLink to={"/"}>
+                    <HeaderNavLink to={"/profile"}>Profile</HeaderNavLink>
+                    <ButtonLink to={"/sign-in"}>
                         <Button  isNav isHeading>Sign in</Button>
                     </ButtonLink>
-                    <ButtonLink to={"/"}>
-                        <Button isNav isHeading isSecondary>Register</Button>
+                    <ButtonLink to={"/register"}>
+                        <Button isNav isHeading isSecondary reference={"/register"}>Register</Button>
                     </ButtonLink>
                 </Nav>
             </HeaderInner>

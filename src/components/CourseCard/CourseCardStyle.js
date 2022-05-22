@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { colors, breakpoints } from "../../lib/style/theme";
 
 export const Course = styled.div`
 
     &:hover {
+        cursor: pointer;
         figure{
             box-shadow: 0 3px 6px ${colors.boxShadowPrimary}, 0 3px 6px ${colors.boxShadowSecondary};
         }

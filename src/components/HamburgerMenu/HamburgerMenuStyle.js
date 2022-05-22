@@ -15,6 +15,13 @@ export const Hamburger = styled(HamburgerIcon)`
         display: none;
     }
 
+    &:hover {
+        path {
+            fill: ${colors.primary};
+        }
+        cursor: pointer;
+    }
+
 
 `
 

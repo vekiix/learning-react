@@ -18,6 +18,7 @@ export const Button = styled.button`
     &:hover{
         transition: all 0.3s ease-in-out;
         filter: drop-shadow(0 3px 3px (${colors.primary}));
+        cursor: pointer;
     }
 
     ${props => props.isNav && `
@@ -33,10 +34,11 @@ export const Button = styled.button`
 
     ${props => props.isOutline && `
         border: 1px solid ${colors.primary};
+        transition: 0.3s ease-in-out;
     `}
 
     ${props => props.isLanding && `
-        order: 1px solid ${colors.primary};
+        width:220px;
     `}
     
     ${props => props.isHeading && `

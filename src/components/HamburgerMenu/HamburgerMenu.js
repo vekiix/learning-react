@@ -11,9 +11,10 @@ const HamburgerMenu = () => {
     return (
         <>
         <Hamburger onClick={handleClick}/>
-        <HamburgerMenuDiv onClick={handleClick} clicked={clicked}>
-            <Button reference = "/course">Sign in</Button>
-            <Button reference = "/course" >Register</Button>
+        <HamburgerMenuDiv clicked={clicked}>
+            <Button reference = "/sign-in">Sign in</Button>
+            <Button reference = "/register" >Register</Button>
+            <Button isSecondary reference = "/profile" >Profile</Button>
             <Button isSecondary reference = "/courses" >Courses</Button>
         </HamburgerMenuDiv>
         </>
