@@ -1,14 +1,18 @@
 import styled from 'styled-components'
-import { colors } from '../../lib/style/theme'
+import { colors, breakpoints } from '../../lib/style/theme'
 
 export const Widget = styled.div `
-    width: 400px;
+    width: 100%;
     background-color: ${colors.boxShadowPrimary};
     display:flex;
     align-content:flex-start;
     padding: 40px;
     border-radius: 15px;
     height: 200px;
+
+    @media (${breakpoints.tablet}) {
+        width: 400px;
+    }  
 
     ${props => props.isActive && `
         height:600px;

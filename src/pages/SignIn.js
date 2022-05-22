@@ -19,7 +19,7 @@ const SignIn = () => {
             <Section 
                     isMainSection
                     isCentered
-                    title={'Register'}>
+                    title={'Sign in'}>
                     <Formik 
                         initialValues={{
                             email: '',

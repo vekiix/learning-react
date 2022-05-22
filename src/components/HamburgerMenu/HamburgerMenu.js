@@ -11,11 +11,11 @@ const HamburgerMenu = () => {
     return (
         <>
         <Hamburger onClick={handleClick}/>
-        <HamburgerMenuDiv clicked={clicked}>
-            <Button reference = "/sign-in">Sign in</Button>
-            <Button reference = "/register" >Register</Button>
-            <Button isSecondary reference = "/profile" >Profile</Button>
-            <Button isSecondary reference = "/courses" >Courses</Button>
+        <HamburgerMenuDiv clicked={clicked} onClick={handleClick}>
+            <Button isNav isOutline reference = "/sign-in">Sign in</Button>
+            <Button isNav isOutline reference = "/register" >Register</Button>
+            <Button isSecondary isOutline reference = "/profile" >Profile</Button>
+            <Button isSecondary isOutline reference = "/courses" >Courses</Button>
         </HamburgerMenuDiv>
         </>
     )
