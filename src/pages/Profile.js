@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/Header/Header.js";
 import Section from "../components/Section/Section.js";
 import Button from "../components/Button/Button.js";
+import {Main} from "../lib/style/generalStyles";
 import {Formik} from 'formik'
 import PasswordResetWidget from "../components/PasswordResetWidget/PasswordResetWidget.js";
 import * as Yup from 'yup'
@@ -39,6 +40,7 @@ const Profile = () => {
     return (
         <>
             <Header isSecondary ={true}/>
+            <Main>
                 <Section 
                     buttonText={editMode ? "cancel" : "edit"}
                     isMainSection
@@ -266,7 +268,7 @@ const Profile = () => {
                         </Formik>
                     </Grid>
                 </Section>
-            
+                </Main>
         </>
     )
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header/Header.js";
-import Main from "../components/Main/Main.js";
+import {Main} from "../lib/style/generalStyles";
 import Section from "../components/Section/Section.js";
 import {Grid} from '../lib/style/generalStyles'
 import LoaderComponent from "../components/LoaderComponent/LoaderComponent.js";
