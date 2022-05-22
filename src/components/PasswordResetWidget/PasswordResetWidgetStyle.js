@@ -7,6 +7,7 @@ export const Widget = styled.div `
     display:flex;
     align-content:flex-start;
     padding: 40px;
+    border-radius: 15px;
     height: 200px;
 
     ${props => props.isActive && `
