@@ -21,3 +21,8 @@ export const Grid = styled.div`
         grid-template-columns: repeat(4, 1fr);
     }
 `
+
+export const Main = styled.div`
+    width: 100%;
+    overflow: hidden;
+`

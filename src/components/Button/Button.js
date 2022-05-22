@@ -16,6 +16,7 @@ const Button = ({reference, children, isNav, isHeading, isOutline, isSecondary, 
             isHeading={isHeading}
             isOutline={isOutline}
             isSecondary={isSecondary}
+            isLanding={isLanding}
             onClick={handleClick}>
                 {children}
         </ButtonComponent>

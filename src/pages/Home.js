@@ -1,6 +1,6 @@
 import {React, useState, useEffect} from "react";
 import Header from "../components/Header/Header.js";
-import Main from "../components/Main/Main.js";
+import {Main} from "../lib/style/generalStyles";
 import Landing from "../components/Landing/Landing.js";
 import Section from "../components/Section/Section.js";
 import CourseCard from "../components/CourseCard/CourseCard.js";
